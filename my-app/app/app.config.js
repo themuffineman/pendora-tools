@@ -2,13 +2,13 @@ export const dashboardLinks = [
     {
         name: 'Home',
         url: 'dashboard/home',
-        icon: 'https://image-here.com',
+        icon: '/public/icons/home.svg',
         subUrls: []
     },
     {
         name: 'Finder',
-        url: 'dashboard/finder',
-        icon: 'https://image-here.com',
+        url: '#',
+        icon: '/public/icons/home.svg',
         subUrls: [
             {
                 name: 'Ecommerce Businesses',
@@ -27,7 +27,7 @@ export const dashboardLinks = [
     {
         name: 'Utility Tools',
         url: 'dashboard/tools',
-        icon: 'https://image-here.com',
+        icon: '/public/icons/home.svg',
         subUrls: [
             {
                 name: 'Email Extractor',
@@ -39,6 +39,16 @@ export const dashboardLinks = [
                 url: 'dashboard/tools/personalized-messenger',
                 tooltip: 'Takes in information about a person/company and crafts a personalized message using said information'
             },
+            {
+                name: 'Email Verifier',
+                url: 'dashboard/tools/email-verfier',
+                tooltip: 'Takes in a list of emails and dtermines if the email is reachable',
+            },
+            {
+                name: 'Website Quality ',
+                url: 'dashboard/tools/website-quality',
+                tooltip: 'Analyses  website to determine it conversion factor and quality UI/UX'
+            }
         ]
     }
 ]
