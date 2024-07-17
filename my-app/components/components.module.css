@@ -1,3 +1,6 @@
 .toggle{
-    transition: height ease .5s
+    transition: height ease 0.5s
+}
+.dashShadow{
+    box-shadow: 10px 0px 10px 2px rgb(248 250 252);
 }

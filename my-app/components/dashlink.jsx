@@ -8,7 +8,7 @@ import { Accordion , AccordionContent, AccordionItem, AccordionTrigger } from '.
 const Dashlink = ({icon, linkName, url, subUrls}) => { 
   const pathname = usePathname()
   return (
-    <Link href={url} className={`w-full ${pathname !== `/${url}` && 'hover:bg-slate-100'} h-max text-black p-2 rounded-sm flex items-center justify-start gap-2 relative ${pathname === `/${url}`? ' ring-[2px] bg-slate-50 ring-neutral-200 ' : 'bg-white'} `}> 
+    <Link href={url} className={`w-full ${pathname !== `/${url}` && 'hover:bg-slate-100'} h-max text-black p-2 rounded-sm flex items-center justify-start gap-2 relative ${pathname === `/${url}`? ' ring-[1px] bg-slate-50 ring-neutral-200 ' : 'bg-white'} `}> 
       <Image
         src={`/icons/${icon}`}
         height={15}

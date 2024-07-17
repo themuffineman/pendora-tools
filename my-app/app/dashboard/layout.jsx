@@ -6,10 +6,11 @@ import Image from 'next/image.js'
 import Link from 'next/link.js'
 
 
+
 const layout = ({children}) => {
   return (
     <div className="w-full h-full text-black flex">
-        <div className='w-[10rem] px-2 shadow-sm  shadow-neutral-100 h-full flex flex-col items-center justify-start gap-10 border-r-2 border-neutral-100'>
+        <div className={`w-[12rem] px-2 shadow-sm  shadow-neutral-100 h-full flex flex-col items-center justify-start gap-10 border-r-[2px] border-neutral-100 ${styles.dashShadow}`}>
           <div className='size-[5rem] p-1 rounded-md relative'>
             <Image
               src='/athricia_logo.png'
@@ -31,14 +32,20 @@ const layout = ({children}) => {
                   width={15}
                   className="object-center"
                 />
-                <p className='text-sm text-black w-max font-normal'>{link.name}</p> 
+                <p className='text-sm text-black w-max font-normal hover:underline'>{link.name}</p> 
               </Link>
             ))}
           </div>
         </div>
-        <div>
-            <div>
-              Hello world
+        <div className="w-full h-full ">
+            <div className='w-full h-[4rem] px-2 flex items-center justify-end bg-neutral-800 text-white'>
+              <div className='size-8 rounded-full flex items-center justify-center ring-[2px] ring-white relative'>
+                <Image
+                  src='/profile.jpeg'
+                  fill={true}
+                  className=" object-center rounded-full object-cover"
+                />
+              </div>
             </div>
             <div>{children}</div>
         </div>
