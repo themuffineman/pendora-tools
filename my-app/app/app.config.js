@@ -1,14 +1,14 @@
 export const dashboardLinks = [
     {
         name: 'Home',
-        url: 'dashboard/home',
-        icon: '/public/icons/home.svg',
+        url: 'dashboard',
+        icon: 'home.svg',
         subUrls: []
     },
     {
         name: 'Finder',
-        url: '#',
-        icon: '/public/icons/home.svg',
+        url: 'dashboard/finder',
+        icon: 'search.svg',
         subUrls: [
             {
                 name: 'Ecommerce Businesses',
@@ -27,7 +27,7 @@ export const dashboardLinks = [
     {
         name: 'Utility Tools',
         url: 'dashboard/tools',
-        icon: '/public/icons/home.svg',
+        icon: 'tool.svg',
         subUrls: [
             {
                 name: 'Email Extractor',
@@ -50,6 +50,30 @@ export const dashboardLinks = [
                 tooltip: 'Analyses  website to determine it conversion factor and quality UI/UX'
             }
         ]
+    },
+    {
+        name: 'Analytics',
+        url: 'dashboard/analytics',
+        icon: 'activity.svg',
+        subUrls: []
     }
 ]
+//urls should not start with '/'
+//icon property directory is referenceing the public/icons/** directory
 
+export const miscLinks = [
+    {
+        name: 'Help Center',
+        url: '#',
+        icon: 'help-circle.svg'
+    },
+    {
+        name: 'Settings',
+        url: '#',
+        icon: 'settings.svg'
+    },{
+        name: 'API Intergration',
+        url: '#',
+        icon: 'code.svg'
+    }
+]

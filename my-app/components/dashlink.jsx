@@ -5,34 +5,18 @@ import { usePathname } from 'next/navigation'
 import React from 'react'
 import { Accordion , AccordionContent, AccordionItem, AccordionTrigger } from './ui/accordion'
 
-const Dashlink = ({icon, linkName, url, subUrls}) => {
+const Dashlink = ({icon, linkName, url, subUrls}) => { 
   const pathname = usePathname()
   return (
-    <div className={`size-[80px] text-black p-2 rounded-md flex flex-col gap-1 ${pathname === `/${url}`? 'bg-slate-300' : 'bg-white'} `}> 
-        {/* url should not start with '/' */}
-        <Image
-            src={icon}
-            height={25}
-            width={25}
-        />
-        {
-          subUrls?.length < 1? 
-          <Link className='text-md font-normal' href={url}>{linkName}</Link> 
-          :
-          <Accordion>
-            <AccordionItem>
-                <AccordionTrigger className='text-md font-normal'>
-                  {linkName}
-                </AccordionTrigger>
-                <AccordionContent className="flex flex-col gap-1">
-                  {subUrls.map((url)=>{
-                    <Link href={url.url} className='text-sm font-normal'>{url.name}</Link>
-                  })}
-                </AccordionContent>
-            </AccordionItem>
-          </Accordion>
-        }
-    </div>
+    <Link href={url} className={`w-full ${pathname !== `/${url}` && 'hover:bg-slate-100'} h-max text-black p-2 rounded-sm flex items-center justify-start gap-2 relative ${pathname === `/${url}`? ' ring-[2px] bg-slate-50 ring-neutral-200 ' : 'bg-white'} `}> 
+      <Image
+        src={`/icons/${icon}`}
+        height={15}
+        width={15}
+        className="object-center"
+      />
+      <p className='text-md text-black w-max font-medium'>{linkName}</p> 
+    </Link>
   )
 }
 
