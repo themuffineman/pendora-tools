@@ -8,14 +8,14 @@ import { Accordion , AccordionContent, AccordionItem, AccordionTrigger } from '.
 const Dashlink = ({icon, linkName, url, subUrls}) => { 
   const pathname = usePathname()
   return (
-    <Link href={url} className={`w-full ${pathname !== `/${url}` && 'hover:bg-slate-100'} h-max text-black p-2 rounded-3xl flex items-center justify-start gap-2 relative ${pathname === `/${url}`? ' ring-[1px] bg-slate-50 ring-neutral-200 ' : 'bg-white'} `}> 
+    <Link href={url} className={`w-full ${pathname !== `/${url}` && 'hover:bg-neutral-700'} transition-colors h-max text-white p-2 pl-4 rounded-3xl flex items-center justify-start gap-2 relative ${pathname === `/${url}`? 'bg-neutral-700 ' : 'bg-transparent'} `}> 
       <Image
         src={`/icons/${icon}`}
         height={15}
         width={15}
-        className="object-center"
+        className="object-center stroke-white text-white"
       />
-      <p className='text-sm text-black w-max font-medium'>{linkName}</p> 
+      <p className='text-xs text-white w-max font-medium'>{linkName}</p> 
     </Link>
   )
 }
