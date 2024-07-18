@@ -49,7 +49,7 @@ const layout = ({children}) => {
                       width={25}
                       className="object-center relative"
                     />
-                    <div className='size-2 rounded-full absolute top-[7px] left-[22px] animate-pulse bg-lime-300 ring-1 ring-black'/>
+                    <div className='size-2 rounded-full absolute top-[7px] left-[22px] animate-pulse bg-lime-300 ring-1 ring-white'/>
                   </div>
                 </PopoverTrigger>
                 <PopoverContent className='bg-neutral-950 flex flex-col p-1 border-neutral-900 w-max'>
@@ -58,6 +58,7 @@ const layout = ({children}) => {
                   <p className='p-3 text-white text-sm hover:bg-neutral-900 rounded-md w-full h-max cursor-pointer'>Get 50% off</p>
                 </PopoverContent>
               </Popover>
+              <button className={`bg-neutral-800 hover:bg-neutral-900 ring-1 shadow-md shadow-black flex items-center justify-center ring-white ring-opacity-30 text-[12px] text-center p-1 px-2 text-white w-max rounded-md h-9 hover:scale-[1px] transition`} >Upgrade</button>
               <div
                 className='w-[2px] h-[50%] bg-neutral-500 rounded-md mr-2'
               />
@@ -69,10 +70,12 @@ const layout = ({children}) => {
                 />
               </div>
               <div className='flex flex-col gap-1 items-start justify-center '>
-                <div className='size-max p-1 rounded-sm bg-lime-200 text-black text-[10px] font-semibold'>
+                <p className='text-xs text-white w-max font-medium bg-neutral-700 rounded-md p-1'>
+                  Magrett K. Hill
+                </p> 
+                <div className='size-max p-1 rounded-sm ring-1 ring-white  bg-lime-200 text-black text-[9px] font-semibold'>
                   PRO
                 </div>
-                <button className={`bg-neutral-800 hover:bg-neutral-900 ring-1 shadow-md shadow-black flex items-center justify-center ring-white ring-opacity-30 text-[12px] text-center p-1 px-2 text-white w-max rounded-md h-9 hover:scale-[1px] transition`} >Upgrade</button>
               </div>
             </div>
             <div>
