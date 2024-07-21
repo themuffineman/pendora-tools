@@ -1,5 +1,5 @@
 import React from 'react'
-import Dashlink from '@/components/dashlink'
+import Dashlink from '@/components/Dashlink.jsx'
 import { dashboardLinks, miscLinks } from '../app.config.js'
 import styles from '@/components/components.module.css'
 import Image from 'next/image.js'
@@ -52,7 +52,7 @@ const layout = ({children}) => {
                     <div className='size-2 rounded-full absolute top-[7px] left-[22px] animate-pulse bg-lime-300 ring-1 ring-white'/>
                   </div>
                 </PopoverTrigger>
-                <PopoverContent className='bg-neutral-950 flex flex-col p-1 border-neutral-900 w-max'>
+                <PopoverContent className='bg-neutral-950 grid grid-flow-row grid-cols-1 p-1 border-neutral-900 w-max'>
                   <p className='p-3 text-white text-sm hover:bg-neutral-900 rounded-md w-full h-max cursor-pointer'>Get 50% off</p>
                   <p className='p-3 text-white text-sm hover:bg-neutral-900 rounded-md w-full h-max cursor-pointer'>Get 50% off</p>
                   <p className='p-3 text-white text-sm hover:bg-neutral-900 rounded-md w-full h-max cursor-pointer'>Get 50% off</p>
