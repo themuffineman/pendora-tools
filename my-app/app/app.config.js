@@ -59,7 +59,7 @@ export const dashboardLinks = [
     }
 ]
 //urls should not start with '/'
-//icon property directory is referenceing the public/icons/** directory
+//icon property directory is referencing the public/icons/** directory
 
 export const miscLinks = [
     {
@@ -75,5 +75,19 @@ export const miscLinks = [
         name: 'API Intergration',
         url: '#',
         icon: 'code.svg'
+    }
+]
+export const dashOverviewData = [
+    {
+        title: 'Emails Sent',
+        icon:  'mail-up.svg'
+    },
+    {
+        title: 'Open Rate',
+        icon: 'mail-opened.svg'
+    },
+    {
+        title: 'Clicked Links',
+        icon: 'hand-click.svg'
     }
 ]
