@@ -5,6 +5,7 @@ import styles from '@/components/components.module.css'
 import Image from 'next/image.js'
 import Link from 'next/link.js'
 import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover.jsx'
+import Button from '@/components/Button.jsx'
 
 
 
@@ -58,7 +59,9 @@ const layout = ({children}) => {
                   <p className='p-3 text-white text-sm hover:bg-neutral-900 rounded-md w-full h-max cursor-pointer'>Get 50% off</p>
                 </PopoverContent>
               </Popover>
-              <button className={`bg-neutral-800 hover:bg-neutral-900 ring-1 shadow-md shadow-black flex items-center justify-center ring-white ring-opacity-30 text-[12px] text-center p-1 px-2 text-white w-max rounded-md h-9 hover:scale-[1px] transition`} >Upgrade</button>
+              <Button className="">
+                Upgrade
+              </Button>
               <div
                 className='w-[2px] h-[50%] bg-neutral-500 rounded-md mr-2'
               />
