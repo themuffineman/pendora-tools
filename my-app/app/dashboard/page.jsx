@@ -4,10 +4,12 @@ import DashCard from '@/components/DashCard'
 
 const page = () => {
   return (
-    <div className='mt-20 text-black flex gap-4 items-center'>
+    <div className='flex flex-col items-center justify-start py-14 text-black gap-4 size-full'>
+      <div className="flex gap-4 items-center">
         {dashOverviewData.map((data)=>(
-          <DashCard title={data.title} icon={data.icon} stat={'45%'} comparison={'45%'}/>
+          <DashCard title={data.title} icon={data.icon} stat={45} comparison={45}/>
         ))}
+      </div>
     </div>
   )
 }

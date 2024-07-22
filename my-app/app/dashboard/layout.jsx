@@ -81,7 +81,7 @@ const layout = ({children}) => {
                 </div>
               </div>
             </div>
-            <div>
+            <div className="size-full">
               {children}
             </div>
         </div>
