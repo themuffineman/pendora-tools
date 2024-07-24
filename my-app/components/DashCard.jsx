@@ -3,20 +3,22 @@ import React from 'react'
 
 const DashCard = ({title, stat, icon, comparison }) => {
   return (
-    <div className='w-[15rem] h-max text-white  bg-neutral-950 hover:ring-1 flex flex-col items-start gap-3 hover:ring-neutral-900   text-center p-4 rounded-md hover:scale-[1px] transition'>
-        <Image
-            src={`/icons/${icon}`}
-            width={25}
-            height={25}
-        />
-        <h4 className='text-[14px] font-thin'>{title}</h4>
-        <h1 className='text-3xl font-extrabold tracking-wide'>{stat}</h1>
+    <div className='w-[16rem] h-[8rem] text-white bg-neutral-800 hover:ring-1 flex flex-col items-start gap-1 justify-between hover:ring-neutral-900   text-center p-4 rounded-md hover:scale-[5px] transition'>
+        <div className="w-full flex justify-start items-center gap-2">
+          <Image
+              src={`/icons/${icon}`}
+              width={15}
+              height={15}
+          />
+          <h4 className='text-[12px] font-thin'>{title}</h4>
+        </div>
+        <h1 className='text-4xl font-black tracking-tight'>{stat}</h1>
         <div className='flex gap-1 items-center w-max'>
             {
                 comparison > 0 ?
-                (<Image src="/icons/trending-up.svg" width={18} height={18}/>):
+                (<Image src="/icons/trending-up.svg" width={15} height={15}/>):
                 comparison < 0 &&
-                (<Image src="/icons/trending-down.svg" width={18} height={18}/>)
+                (<Image src="/icons/trending-down.svg" width={15} height={15}/>)
             }
             <p className='text-neutral-500 text-[12px]'>{comparison}%</p>
         </div>
