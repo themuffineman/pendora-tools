@@ -1,6 +1,8 @@
+"use client"
 import React from 'react'
 import { dashOverviewData } from '../app.config'
 import DashCard from '@/components/DashCard'
+import Chart from '@/components/Chart'
 
 const page = () => {
   return (
@@ -10,6 +12,10 @@ const page = () => {
           <DashCard title={data.title} icon={data.icon} stat={45} comparison={45}/>
         ))}
       </div>
+      <div className="w-1/2">
+        <Chart/>
+      </div>
+      <div></div>
     </div>
   )
 }
