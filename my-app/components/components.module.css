@@ -7,3 +7,7 @@
 .stroke{
     stroke: white;
 }
+.TabsTrigger[data-state='active'] {
+    background-color: black;
+    color: white;
+}
