@@ -11,3 +11,8 @@
     background-color: black;
     color: white;
 }
+.SelectItem[data-highlighted] {
+    outline: none;
+    background-color: #404040;
+    color: white;
+}
