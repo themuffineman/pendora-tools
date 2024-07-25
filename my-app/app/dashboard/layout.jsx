@@ -39,8 +39,8 @@ const layout = ({children}) => {
             ))}
           </div>
         </div>
-        <div className="w-[85%] h-full flex flex-col ">
-            <div className='w-full h-[5rem] px-5 flex gap-3 items-center justify-end bg-neutral-950 text-white'>
+        <div className="w-[85%] h-full flex flex-col relative">
+            <div className='w-full h-[12%] px-5 flex gap-3 items-center justify-end bg-neutral-950 text-white'>
               <Popover>
                 <PopoverTrigger>
                   <div className='relative hover:bg-neutral-700 transition p-2 rounded-md'>
@@ -81,7 +81,7 @@ const layout = ({children}) => {
                 </div>
               </div>
             </div>
-            <div className="size-full">
+            <div className="w-full h-[88%]">
               {children}
             </div>
         </div>

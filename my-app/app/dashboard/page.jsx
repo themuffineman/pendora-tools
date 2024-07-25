@@ -21,7 +21,7 @@ import {
 
 const page = () => {
   return (
-    <div className='flex flex-col items-center justify-start py-14 px-40 text-black gap-10 h-[80%] overflow-auto w-full'>
+    <div className='flex flex-col items-center justify-start py-14 px-40 text-black gap-10 h-full overflow-auto w-full'>
       <div className="flex items-center justify-between w-full">
         {dashOverviewData.map((data)=>(
           <DashCard title={data.title} icon={data.icon} stat={45} comparison={45}/>
