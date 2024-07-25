@@ -12,7 +12,7 @@ import Button from '@/components/Button.jsx'
 const layout = ({children}) => {
   return (
     <div className="w-full h-full text-white bg-black flex">
-        <div className={`w-[15%] max-w-[13rem] px-2 bg-neutral-900 h-full flex flex-col items-center justify-start gap-10 `}>
+        <div className={`w-[15%] max-w-[13rem] px-2 bg-neutral-900 h-full flex flex-col items-center justify-between py-2 gap-10 `}>
           <div className='size-[5rem] p-1 rounded-md relative'>
             <Image
               src='/athricia_logo.png'

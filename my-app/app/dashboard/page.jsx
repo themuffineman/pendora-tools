@@ -21,13 +21,13 @@ import {
 
 const page = () => {
   return (
-    <div className='flex flex-col items-center justify-start py-14 px-40 text-black gap-4 size-full'>
+    <div className='flex flex-col items-center justify-start py-14 px-40 text-black gap-10 h-[80%] overflow-auto w-full'>
       <div className="flex items-center justify-between w-full">
         {dashOverviewData.map((data)=>(
           <DashCard title={data.title} icon={data.icon} stat={45} comparison={45}/>
         ))}
       </div>
-      <div className="w-full flex items-center justify-between">
+      <div className="w-full h-full flex items-center justify-between">
         <Tabs className="w-max bg-black" defaultValue="emailsSent">
           <TabsList className="grid w-full grid-cols-3 bg-neutral-900">
             <TabsTrigger value="emailsSent" className={`text-white font-medium ${styles.TabsTrigger}`}>
@@ -59,7 +59,6 @@ const page = () => {
       <div className="w-full">
         <Chart />
       </div>
-      <div></div>
     </div>
   )
 }
