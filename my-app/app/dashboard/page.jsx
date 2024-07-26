@@ -17,6 +17,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select"
+import RecentCard from '@/components/RecentCard'
 
 
 const page = () => {
@@ -58,6 +59,9 @@ const page = () => {
       </div>
       <div className="w-full">
         <Chart />
+      </div>
+      <div classsName="w-full">
+        <RecentCard recentTitle={'Emails Sent'}/>
       </div>
     </div>
   )
