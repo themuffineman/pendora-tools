@@ -25,9 +25,9 @@ const RecentCard = ({recentTitle, recentData}) => {
             <CardTitle>Recent {recentTitle}</CardTitle>
         </CardHeader>
         <CardContent>
-            <Table>
+            <Table className="w-full">
                 <TableCaption>A list of your recent sent emails.</TableCaption>
-                <TableHeader >
+                <TableHeader>
                     <TableRow className="hover:bg-neutral-800">
                         <TableHead className="w-[100px] text-white">Email</TableHead>
                         <TableHead className="text-right text-white">Date</TableHead>

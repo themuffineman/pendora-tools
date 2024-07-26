@@ -23,7 +23,7 @@ const chartConfig = {
 
 const Chart = ({data}) => {
     return (
-        <ChartContainer config={chartConfig} className="h-[200px] w-full">
+        <ChartContainer config={chartConfig} className="h-[300px] w-full">
           <LineChart accessibilityLayer data={chartData} margin={{left: 12,right: 12,}}>
             <CartesianGrid vertical={false} />
             <XAxis

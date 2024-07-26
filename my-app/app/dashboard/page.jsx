@@ -22,7 +22,7 @@ import RecentCard from '@/components/RecentCard'
 
 const page = () => {
   return (
-    <div className='flex flex-col items-center justify-start py-14 px-40 text-black gap-10 h-full overflow-auto w-full'>
+    <div className={` ${styles.ScrollBar} flex flex-col items-center justify-start py-14 px-40 text-black gap-10 h-full overflow-auto w-full`}>
       <div className="flex items-center justify-between w-full">
         {dashOverviewData.map((data)=>(
           <DashCard title={data.title} icon={data.icon} stat={45} comparison={45}/>
@@ -57,10 +57,10 @@ const page = () => {
           </SelectContent>
         </Select>
       </div>
-      <div className="w-full">
-        <Chart />
+      <div className="w-full bg-neutral-950 hover:ring-1 hover:ring-neutral-800 p-4 py-8 pt-10 rounded-md hover:scale-[5px] transition">
+        <Chart /> 
       </div>
-      <div classsName="w-full">
+      <div className="w-full hover:ring-1 hover:ring-neutral-800 p-4 py-8 pt-10 rounded-md hover:scale-[5px] transition">
         <RecentCard recentTitle={'Emails Sent'}/>
       </div>
     </div>
