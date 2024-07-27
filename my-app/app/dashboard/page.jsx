@@ -23,9 +23,20 @@ import RecentCard from '@/components/RecentCard'
 const page = () => {
   const [initChartData, setInitChartData] = useState({
     emailsSent: new Map([
-      ['12/07/2024', 45],
-      ['13/07/2024', 50],
-      ['14/07/2024', 55]
+      ['27/07/2024', 45],
+      ['26/07/2024', 50],
+      ['22/07/2024', 2],
+      ['21/07/2024', 30],
+      ['20/07/2024', 42],
+      ['19/07/2024', 50],
+      ['18/07/2024', 60],
+      ['17/07/2024', 75],
+      ['16/07/2024', 100],
+      ['15/07/2024', 34],
+      ['14/07/2024', 28],
+      ['12/07/2024', 77],
+      ['11/07/2024', 82],
+      ['10/07/2024', 15]
     ]),
     openedEmails: new Map([
       ['12/07/2024', 30],
@@ -41,7 +52,7 @@ const page = () => {
   const [recentData, setRecentData] = useState([])
   const [modifiedChartData, setModifiedChartData] = useState()
   const [currentTab, setCurrentTab] = useState('emailsSent')
-  const [timeframe, setTimeframe] = useState(0)
+  const [timeframe, setTimeframe] = useState(7)
 
   function getPastDates(days){
     let dates = [];
@@ -111,7 +122,7 @@ const page = () => {
           <TabsContent value="openRate"></TabsContent>
           <TabsContent value="clickedLinks"></TabsContent>
         </Tabs>
-        <Select defaultValue="today" onValueChange={(value)=>{setTimeframe(value)}}>
+        <Select defaultValue={7} onValueChange={(value)=>{setTimeframe(value)}}>
           <SelectTrigger className="bg-neutral-900 border-none text-white w-[200px] outline-none focus:border-none focus:ring-0">
             <SelectValue placeholder="Choose Timeframe"/>
           </SelectTrigger>

@@ -1,6 +1,6 @@
 "use client"
 import React from 'react'
-import { CartesianGrid, Line, LineChart, XAxis } from "recharts"
+import { CartesianGrid, Line, LineChart, XAxis, YAxis } from "recharts"
 import { ChartTooltip, ChartTooltipContent } from "@/components/ui/chart"
 import { ChartConfig, ChartContainer } from "@/components/ui/chart"
 
@@ -13,44 +13,44 @@ const chartData = [
   { Month: "June", Emails: 214 },
 ]
 
-const chartConfig = {
-    Emails: {
-      label: "Emails:",
-      color: "#fff",
+
+
+const Chart = ({data, property}) => {
+  const chartConfig = {
+    count: {
+      label: 'Count',
+      color: "#00ff"
     },
-}
-
-
-const Chart = ({data}) => {
-    return (
-        <ChartContainer config={chartConfig} className="h-[300px] w-full">
-          <LineChart accessibilityLayer data={chartData} margin={{left: 12,right: 12,}}>
-            <CartesianGrid vertical={false} />
-            <XAxis
-                dataKey="Month"
-                tickLine={false}
-                axisLine={false}
-                tickMargin={8}
-                tickFormatter={(value) => value.slice(0, 3)}
+  }
+  return (
+      <ChartContainer config={chartConfig} className="h-[300px] w-full">
+        <LineChart accessibilityLayer data={data} margin={{left: 12,right: 12,}}>
+          <CartesianGrid vertical={false} />
+          <XAxis
+              dataKey="date"
+              tickLine={false}
+              axisLine={false}
+              tickMargin={8}
+              tickFormatter={(value) => value.slice(0, 3)}
+          />
+          <YAxis/>
+          <ChartTooltip
+            cursor={false}
+            content={<ChartTooltipContent hideLabel />}
+            // wrapperClassName='bg-neutral-900'
+            // labelClassName='text-white'
+            
+          />
+          <Line 
+              dataKey="count"
+              type="linear"
+              stroke="#0000FF"
+              strokeWidth={3}
+              dot={false}
             />
-            <ChartTooltip
-              cursor={false}
-              content={<ChartTooltipContent hideLabel />}
-            />
-            <Line 
-                dataKey="Emails"
-                type="natural"
-                stroke="#fff"
-                strokeWidth={2}
-                dot={{
-                    fill: "#00ff",
-                }}
-                activeDot={{
-                    r: 6,
-            }}/>
-          </LineChart>
-        </ChartContainer>
-      )
+        </LineChart>
+      </ChartContainer>
+  )
   }
   
   export default Chart

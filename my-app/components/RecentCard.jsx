@@ -2,8 +2,6 @@ import React from 'react'
 import {
     Card,
     CardContent,
-    CardDescription,
-    CardFooter,
     CardHeader,
     CardTitle,
 } from "@/components/ui/card"
@@ -26,18 +24,20 @@ const RecentCard = ({recentTitle, recentData}) => {
         </CardHeader>
         <CardContent>
             <Table className="w-full">
-                <TableCaption>A list of your recent sent emails.</TableCaption>
+                <TableCaption>A list of your recent {recentTitle}.</TableCaption>
                 <TableHeader>
                     <TableRow className="hover:bg-neutral-800">
-                        <TableHead className="w-[100px] text-white">Email</TableHead>
+                        <TableHead className="w-[100px] text-white">Lead</TableHead>
                         <TableHead className="text-right text-white">Date</TableHead>
                     </TableRow>
                 </TableHeader>
                 <TableBody>
-                    <TableRow className="hover:bg-neutral-800">
-                        <TableCell className="font-medium text-white">petrusheya@gmail.com</TableCell>
-                        <TableCell className="text-right text-white">12/07/2024</TableCell>
-                    </TableRow>
+                    {recentData?.map((data)=>(
+                        <TableRow className="hover:bg-neutral-800 border-none">
+                        <TableCell className="font-medium text-white">{data.email}</TableCell>
+                        <TableCell className="text-right text-white">{data.date}</TableCell>
+                        </TableRow>
+                    ))}
                 </TableBody>
             </Table>              
         </CardContent>
