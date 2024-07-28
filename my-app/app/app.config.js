@@ -13,14 +13,17 @@ export const dashboardLinks = [
             {
                 name: 'Ecommerce Businesses',
                 url: 'dashboard/finder/ecom-finder',
+                icon: 'shopping-bag'
             },
             {
                 name: 'Software Businesses',
-                url: 'dashboard/finder/ecom-finder',
+                url: 'dashboard/finder/saas-finder',
+                icon: 'box-code-alt'
             },
             {
                 name: 'Local Businesses',
-                url: 'dashboard/finder/ecom-finder',
+                url: 'dashboard/finder/local-finder',
+                icon: 'map-pin'
             }
         ]
     },

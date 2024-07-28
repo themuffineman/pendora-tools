@@ -18,6 +18,7 @@ import {
   SelectValue,
 } from "@/components/ui/select"
 import RecentCard from '@/components/RecentCard'
+import { Button } from '@/components/ui/button'
 
 
 const page = () => {
@@ -137,9 +138,10 @@ const page = () => {
       <div className="w-full bg-neutral-950 hover:ring-1 hover:ring-neutral-800 p-4 py-8 pt-10 rounded-md hover:scale-[5px] transition">
         <Chart data={modifiedChartData} /> 
       </div>
-      <div className="w-full hover:ring-1 hover:ring-neutral-800 rounded-md hover:scale-[5px] transition">
+      <div className="w-full flex flex-col gap-2 hover:ring-1 hover:ring-neutral-800 rounded-md hover:scale-[5px] transition">
         <RecentCard recentTitle={'Emails Sent'}/>
       </div>
+      <Button variant="secondary" className="w-max ">See More Analytics</Button>
     </div>
   )
 }
