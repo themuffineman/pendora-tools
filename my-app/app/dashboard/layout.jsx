@@ -13,13 +13,13 @@ const layout = ({children}) => {
   return (
     <div className="w-full h-full text-white bg-black flex">
         <div className={`w-[15%] max-w-[13rem] px-2 bg-neutral-900 h-full flex flex-col items-center justify-between py-2 gap-10 `}>
-          <div className='size-[5rem] p-1 rounded-md relative'>
             <Image
-              src='/athricia_logo.png'
-              fill={true}
-              className="max-w-full max-h-full object-cover object-center rounded-md"
+              src='/trullylanelogo.svg'
+              width={120}
+              height={41}
+              className="max-w-full max-h-full object-cover mt-3 object-center rounded-md"
             />
-          </div>
+          
           <div className="flex flex-col gap-5 w-full">
             {dashboardLinks.map((link)=>(
               <Dashlink key={link.name} icon={link.icon} url={link.url} linkName={link.name} subUrls={link.subUrls} />

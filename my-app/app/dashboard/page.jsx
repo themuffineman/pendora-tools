@@ -22,21 +22,27 @@ import { Button } from '@/components/ui/button'
 
 
 const page = () => {
-  const [initChartData, setInitChartData] = useState({
+  const chartData = {
     emailsSent: new Map([
-      ['27/07/2024', 45],
-      ['26/07/2024', 50],
-      ['22/07/2024', 2],
-      ['21/07/2024', 30],
-      ['20/07/2024', 42],
+      ['29/07/2024', 90],
+      ['28/07/2024', 92],
+      ['27/07/2024', 90],
+      ['26/07/2024', 86],
+      ['25/07/2024', 85],
+      ['24/07/2024', 81],
+      ['23/07/2024', 73],
+      ['22/07/2024', 63],
+      ['21/07/2024', 60],
+      ['20/07/2024', 55],
       ['19/07/2024', 50],
-      ['18/07/2024', 60],
-      ['17/07/2024', 75],
-      ['16/07/2024', 100],
-      ['15/07/2024', 34],
-      ['14/07/2024', 28],
-      ['12/07/2024', 77],
-      ['11/07/2024', 82],
+      ['18/07/2024', 52],
+      ['17/07/2024', 44],
+      ['16/07/2024', 41],
+      ['15/07/2024', 40],
+      ['14/07/2024', 35],
+      ['13/07/2024', 35],
+      ['12/07/2024', 35],
+      ['11/07/2024', 30],
       ['10/07/2024', 15]
     ]),
     openedEmails: new Map([
@@ -49,25 +55,26 @@ const page = () => {
       ['13/07/2024', 20],
       ['14/07/2024', 25]
     ])
-  })
+  }
+  const [initChartData, setInitChartData] = useState(chartData)
   const [recentData, setRecentData] = useState([])
   const [modifiedChartData, setModifiedChartData] = useState()
   const [currentTab, setCurrentTab] = useState('emailsSent')
   const [timeframe, setTimeframe] = useState(7)
 
-  function getPastDates(days){
+  function getPastDates(days) {
     let dates = [];
     let currentDate = new Date();
-
-    for (let i = 0; i < days; i++) {
+  
+    for (let i = days - 1; i >= 0; i--) {
       let date = new Date(currentDate);
       date.setDate(currentDate.getDate() - i);
       let formattedDate = formatDate(date);
       dates.push(formattedDate);
     }
-
+  
     return dates;
-  }
+  }  
 
   function formatDate(date){
     let day = String(date.getDate()).padStart(2, '0');
@@ -128,10 +135,9 @@ const page = () => {
             <SelectValue placeholder="Choose Timeframe"/>
           </SelectTrigger>
           <SelectContent className=" bg-neutral-900 border-none ">
-            <SelectItem className={`text-white ${styles.SelectItem}`} value={0}>Today</SelectItem>
-            <SelectItem className={`text-white ${styles.SelectItem}`} value={1}>Yesterday</SelectItem>
             <SelectItem className={`text-white ${styles.SelectItem}`} value={7}>Past Week</SelectItem>
-            <SelectItem className={`text-white ${styles.SelectItem}`} value={30}>Last 30 Days</SelectItem>
+            <SelectItem className={`text-white ${styles.SelectItem}`} value={30}>Past 30 Days</SelectItem>
+            <SelectItem className={`text-white ${styles.SelectItem}`} value={365}>Past Year</SelectItem>
           </SelectContent>
         </Select>
       </div>

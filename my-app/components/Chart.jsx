@@ -21,25 +21,18 @@ const Chart = ({data, property}) => {
       label: 'Count',
       color: "#00ff"
     },
+    date: {
+      label: 'Date'
+    }
   }
   return (
       <ChartContainer config={chartConfig} className="h-[300px] w-full">
         <LineChart accessibilityLayer data={data} margin={{left: 12,right: 12,}}>
           <CartesianGrid vertical={false} />
-          <XAxis
-              dataKey="date"
-              tickLine={false}
-              axisLine={false}
-              tickMargin={8}
-              tickFormatter={(value) => value.slice(0, 3)}
-          />
           <YAxis/>
           <ChartTooltip
             cursor={false}
-            content={<ChartTooltipContent hideLabel />}
-            // wrapperClassName='bg-neutral-900'
-            // labelClassName='text-white'
-            
+            content={<ChartTooltipContent hideLabel  labelKey="count" nameKey="count" indicator={'line'} />}
           />
           <Line 
               dataKey="count"
